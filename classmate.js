@@ -1,7 +1,7 @@
 const drum = new Audio('audio/drum.mp3');
 const symbal = new Audio('audio/symbal.mp3');
 function generateRandomNumber() {
-	return Math.floor(Math.random() * 36) + 1; // 1����36�܂ł̃����_���Ȑ���Ԃ�
+	return Math.floor(Math.random() * max.value) + 1; // 1����36�܂ł̃����_���Ȑ���Ԃ�
 }
 
 
@@ -24,16 +24,5 @@ function end(){
 	drum.play();
 }
 var generateBtn = document.getElementById("generate-btn"); // �{�^�����擾
+var max = document.getElementById("range");
 generateBtn.addEventListener("click", generate); // �{�^���ɃN���b�N�C�x���g��ǉ�
-
-//////////////////////////////////////////////////////////////////////////////
-
-// //画面に画像を表示する
-document.write( '<img id="images" src="images/penguin.png">' );
-
-// //キャラクターを動かす
-var y = 0;
- document.getElementById( 'rico' ).onclick = function() {
-	y += 32;
- 	document.getElementById( 'rico' ).style.top = y + "px";
-}
